@@ -1,3 +1,4 @@
+import {useState} from "react";
 import "./App.css";
 import { AudioClip } from "./types";
 import Drum from "./Drum";
@@ -65,7 +66,7 @@ function App() {
   };
   return (
     <div className="container" id="drum-machine" onKeyDown={playAudio}>
-      <h1>FCC Drum Machine</h1>
+      <h1>Drum Machine</h1>
       <div className="whole-drum">
         {audioClips.map((clip) => (
           <Drum audioClip={clip} key={clip.keyTrigger} />
